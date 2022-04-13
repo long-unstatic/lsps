@@ -175,6 +175,8 @@ export class Workspace {
   // Maps from conn to document uris. Used to find editors using the connection.
   private connectionToUris: WeakMap<LspConnection, Set<string>> = new WeakMap();
 
+  worker?: Worker;
+
   /**
    * Create new workspace.
    * @param options
@@ -969,9 +971,9 @@ export class Workspace {
       });
       return conn;
     } else {
-      const mconn = await createWorkerMessageConnection(
-        new Worker(connectionString)
-      );
+      this.worker?.terminate();
+      this.worker = new Worker(connectionString);
+      const mconn = await createWorkerMessageConnection(this.worker);
       const conn = createLspConnection(mconn);
       await initialize(conn, false);
       return conn;
