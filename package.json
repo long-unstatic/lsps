@@ -4,9 +4,6 @@
   "homepage": "https://github.com/qualified/lsps#readme",
   "repository": "https://github.com/qualified/lsps",
   "bugs": "https://github.com/qualified/lsps/issues",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@long-unstatic"
-  },
   "scripts": {
     "changeset-version": "changeset version && pnpm install --frozen-lockfile=false",
     "test": "pnpm multi test",
@@ -21,6 +18,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.16.0",
     "husky": "^7.0.0",
+    "lerna": "^4.0.0",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.2",
     "typescript": "^4.0.2"

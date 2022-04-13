@@ -1,5 +1,5 @@
 {
-  "name": "@qualified/codemirror-workspace",
+  "name": "@long-unstatic/codemirror-workspace",
   "description": "Provides intelligence to CodeMirror editors",
   "keywords": [
     "codemirror",
@@ -10,9 +10,7 @@
   ],
   "version": "0.4.0",
   "license": "MIT",
-  "homepage": "https://github.com/qualified/lsps#readme",
-  "repository": "https://github.com/qualified/lsps",
-  "bugs": "https://github.com/qualified/lsps/issues",
+  "repository": "https://github.com/long-unstatic/lsps",
   "main": "lib/cjs/index",
   "module": "lib/esm/index",
   "files": [
@@ -44,5 +42,8 @@
     "jest": "^27.0.0",
     "ts-jest": "^27.0.0",
     "typescript": "^4.0.2"
+  },
+  "publishConfig": {
+    "@long-unstatic:registry": "https://npm.pkg.github.com"
   }
 }
